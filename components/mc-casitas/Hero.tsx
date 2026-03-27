@@ -1,7 +1,7 @@
 import { Image } from 'expo-image';
 import { Pressable, Text, View } from 'react-native';
 
-import { MC_IMAGES } from '@/constants/mc-casitas';
+const HERO_IMAGE = require('@/assets/images/hero.png');
 
 export function Hero() {
   return (
@@ -36,10 +36,10 @@ export function Hero() {
 
         <View className="h-64 w-full flex-1 overflow-hidden rounded-2xl bg-mist-4 shadow-sm sm:h-80 lg:h-[420px]">
           <Image
-            source={{ uri: MC_IMAGES.heroBuilding }}
+            source={HERO_IMAGE}
             contentFit="cover"
             transition={300}
-            className="h-full w-full"
+            style={{ width: '100%', height: '100%' }}
             accessibilityLabel="Edificio moderno de apoyo a familias"
           />
         </View>

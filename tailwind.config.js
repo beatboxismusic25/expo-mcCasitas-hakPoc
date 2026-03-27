@@ -4,12 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        /** Landing McCasitas Felices (mockup) */
         mc: {
           red: "#e0301e",
           yellow: "#ffc72c",
+          orange: "#ff5500",
           cream: "#fdf9f0",
+          portalBg: "#fefdf5",
           dark: "#1a1f2c",
+          input: "#f2f2f2",
         },
         brand: {
           primary: "rgb(255 195 0 / <alpha-value>)",

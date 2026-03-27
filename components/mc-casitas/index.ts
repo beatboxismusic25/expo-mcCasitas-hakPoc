@@ -1,3 +1,4 @@
+export { CorporatePortalScreen } from './CorporatePortalScreen';
 export { CtaBanner } from './CtaBanner';
 export { Footer } from './Footer';
 export { Hero } from './Hero';

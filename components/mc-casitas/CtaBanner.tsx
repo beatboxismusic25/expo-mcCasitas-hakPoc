@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Link } from 'expo-router';
 import { Pressable, Text, View } from 'react-native';
 
 const GRADIENT_COLORS = ['#e0301e', '#ffc72c'] as const;
@@ -22,13 +23,15 @@ export function CtaBanner() {
               Cada aporte se convierte en noches de hospedaje, traslados y acompañamiento real para
               quien más lo necesita.
             </Text>
-            <Pressable
-              accessibilityRole="button"
-              accessibilityLabel="Ir al portal corporativo"
-              className="mt-8 flex-row items-center gap-2 rounded-xl bg-white px-6 py-3.5 active:opacity-90">
-              <Ionicons name="folder-outline" size={20} color="#e0301e" />
-              <Text className="font-sans text-base font-semibold text-mc-red">Portal corporativo</Text>
-            </Pressable>
+            <Link href="/portal" asChild>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel="Ir al portal corporativo"
+                className="mt-8 flex-row items-center gap-2 rounded-xl bg-white px-6 py-3.5 active:opacity-90">
+                <Ionicons name="folder-outline" size={20} color="#e0301e" />
+                <Text className="font-sans text-base font-semibold text-mc-red">Portal corporativo</Text>
+              </Pressable>
+            </Link>
           </View>
         </LinearGradient>
       </View>

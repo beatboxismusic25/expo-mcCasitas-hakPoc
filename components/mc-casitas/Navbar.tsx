@@ -29,26 +29,34 @@ export function Navbar() {
             <Ionicons name="globe-outline" size={22} color="#1D1D1D" />
           </Pressable>
 
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel="Ir a inicio"
-            className="flex-row items-center gap-1.5 rounded-full bg-mc-red px-4 py-2 active:opacity-90">
-            <Ionicons name="heart" size={16} color="#FAFAFA" />
-            <Text className="font-sans text-sm font-semibold text-paper">Inicio</Text>
-          </Pressable>
+          <Link href="/" asChild>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Ir a inicio"
+              className="flex-row items-center gap-1.5 rounded-full bg-mc-red px-4 py-2 active:opacity-90">
+              <Ionicons name="heart" size={16} color="#FAFAFA" />
+              <Text className="font-sans text-sm font-semibold text-paper">Inicio</Text>
+            </Pressable>
+          </Link>
 
-          <Pressable accessibilityRole="button" className="rounded-lg px-2 py-2 active:bg-mist-5">
-            <Text className="font-sans text-sm font-medium text-ink-2">Portal corporativo</Text>
-          </Pressable>
+          <Link href="/portal" asChild>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Portal corporativo"
+              className="flex-row items-center gap-1.5 rounded-lg px-2 py-2 active:bg-mist-5">
+              <Ionicons name="business-outline" size={20} color="#1D1D1D" />
+              <Text className="font-sans text-sm font-medium text-ink-2">Portal corporativo</Text>
+            </Pressable>
+          </Link>
 
           <Pressable accessibilityRole="button" className="rounded-lg px-2 py-2 active:bg-mist-5">
             <Text className="font-sans text-sm font-medium text-ink-2">Familias</Text>
           </Pressable>
 
-          <Link href="/explore" asChild>
+          <Link href="/login" asChild>
             <Pressable
               accessibilityRole="button"
-              accessibilityLabel="Abrir explorar app"
+              accessibilityLabel="Iniciar sesión"
               className="rounded-lg px-2 py-2 active:bg-mist-5">
               <Text className="font-sans text-sm font-semibold text-mc-red">Iniciar sesión</Text>
             </Pressable>
@@ -66,21 +74,26 @@ export function Navbar() {
 
       {menuOpen ? (
         <View className="border-b border-mist-4 bg-white px-4 py-3 sm:hidden">
-          <Pressable
-            className="flex-row items-center gap-2 rounded-full bg-mc-red px-4 py-3 active:opacity-90"
-            onPress={closeMenu}
-            accessibilityRole="button"
-            accessibilityLabel="Inicio">
-            <Ionicons name="heart" size={18} color="#FAFAFA" />
-            <Text className="font-sans font-semibold text-paper">Inicio</Text>
-          </Pressable>
-          <Pressable className="mt-2 py-3 active:bg-mist-5" onPress={closeMenu}>
-            <Text className="font-sans text-ink-2">Portal corporativo</Text>
-          </Pressable>
+          <Link href="/" asChild>
+            <Pressable
+              className="flex-row items-center gap-2 rounded-full bg-mc-red px-4 py-3 active:opacity-90"
+              onPress={closeMenu}
+              accessibilityRole="button"
+              accessibilityLabel="Inicio">
+              <Ionicons name="heart" size={18} color="#FAFAFA" />
+              <Text className="font-sans font-semibold text-paper">Inicio</Text>
+            </Pressable>
+          </Link>
+          <Link href="/portal" asChild>
+            <Pressable className="mt-2 flex-row items-center gap-2 py-3 active:bg-mist-5" onPress={closeMenu}>
+              <Ionicons name="business-outline" size={20} color="#1D1D1D" />
+              <Text className="font-sans text-ink-2">Portal corporativo</Text>
+            </Pressable>
+          </Link>
           <Pressable className="py-3 active:bg-mist-5" onPress={closeMenu}>
             <Text className="font-sans text-ink-2">Familias</Text>
           </Pressable>
-          <Link href="/explore" asChild>
+          <Link href="/login" asChild>
             <Pressable className="py-3 active:bg-mist-5" onPress={closeMenu} accessibilityRole="link">
               <Text className="font-sans font-semibold text-mc-red">Iniciar sesión</Text>
             </Pressable>

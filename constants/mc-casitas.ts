@@ -1,11 +1,4 @@
-/**
- * Contenido y assets de la landing McCasitas Felices.
- * Centralizar aquí facilita i18n y CMS más adelante.
- */
-
 export const MC_IMAGES = {
-  heroBuilding:
-    'https://images.unsplash.com/photo-1564760055776-c8431909538e?w=960&q=80&auto=format&fit=crop',
   testimonial1:
     'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=720&q=80&auto=format&fit=crop',
   testimonial2:
